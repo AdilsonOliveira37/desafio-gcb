@@ -2,10 +2,24 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: var(--white-background) url('../../assets/images/signup.svg') no-repeat;
-  
+
+  aside {
+    flex: 5;
+    background: var(--white-background);
+    color: var(--green-primary);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      max-width: 320px;
+    }
+  }
  
+  main{
+    flex: 8;
+  }
   form {
     display:flex;
     flex-direction: column;
