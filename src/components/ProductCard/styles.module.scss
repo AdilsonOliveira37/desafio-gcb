@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  width: calc(50% - 1rem);
+  height: 225px;
+  margin: 0.5rem 0;
+  background: var(--white-background);
+  border-radius: 7px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+
+  // width: auto;
+  img {
+    border-radius: 7px 0 0 7px;
+    object-fit: cover;
+    height: 225px;
+    min-width: 40%;
+  }
+
+  div {
+    width: 100%;
+    margin: auto 0;
+    padding: 1rem;
+
+    h3 {
+      font: 700 1.5rem var(--font-title);
+      color: var(--blue-title);
+    }
+
+    button{
+      margin-top: 1rem;
+      width: auto;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    // flex-direction: column;
+    width: 100%;
+  }
+}
