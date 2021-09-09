@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Healthy Food - React APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um desafio proposto pela GCB Investimentos para uma vaga front-end, a proposta é desenvolver uma aplicação a partir de um protótipo feito no adobe XD. O site deve ser todo responsivo, e também deveria ser implementado uma tela de cadastro, onde os dados seriam armazenados no Local Storage.
 
 ## Available Scripts
 
