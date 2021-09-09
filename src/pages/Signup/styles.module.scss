@@ -68,7 +68,6 @@
       align-items: center;
       padding: 3rem 1rem;
 
-
       h1 {
         font: 700 2rem var(--font-title);
         color: var(--blue-title);
@@ -93,6 +92,21 @@
     
     main {
       justify-content: center;
+
+      > div{
+        min-width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container { 
+    main {
+      > div{
+        min-width: 100%;
+        padding: 2rem;
+      }
     }
   }
 }
