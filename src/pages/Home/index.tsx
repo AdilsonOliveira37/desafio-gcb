@@ -10,9 +10,9 @@ import serviceImg from '../../assets/images/Illustration2.svg';
 import clientImg from '../../assets/images/Illustration3.svg';
 import searchIcon from '../../assets/images/search_white_24dp.svg';
 
-import profileImg1 from "../../assets/images/pessoa4.jpg";
-import profileImg2 from "../../assets/images/pessoa4.jpg";
-import profileImg3 from "../../assets/images/pessoa4.jpg";
+import profileImg1 from "../../assets/images/pessoa1.jpg";
+import profileImg2 from "../../assets/images/pessoa2.jpg";
+import profileImg3 from "../../assets/images/pessoa3.jpg";
 import profileImg4 from "../../assets/images/pessoa4.jpg";
 import recipe1 from "../../assets/images/prato1.jpg";
 import recipe2 from "../../assets/images/prato2.jpg";
@@ -22,6 +22,8 @@ import post1 from "../../assets/images/post1.jpg";
 import post2 from "../../assets/images/post2.jpg";
 import post3 from "../../assets/images/post3.jpg";
 import post4 from "../../assets/images/post4.jpg";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
 
 export function Home() {
   const responsive = {
@@ -95,6 +97,7 @@ export function Home() {
 
   return (
     <>
+      <Header />
       {/* Seção de Introdução  */}
       <main className={styles.container}>
         <section className={styles.introductionContent}>
@@ -215,6 +218,7 @@ export function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   )
 }

@@ -77,7 +77,7 @@ section {
   }
 }
 
-// Estilos da seção de Recipes
+// Seção de receitas
 .recipesContent {
   background: var(--gray-background);
   align-items: flex-start;
@@ -97,6 +97,7 @@ section {
   }
 }
 
+// Seção de serviços
 .servicesContent {
   position: relative;
 
@@ -117,6 +118,7 @@ section {
   }
 }
 
+// Seção de blog
 .blogContent {
   background: var(--gray-background);
 
@@ -139,16 +141,17 @@ section {
     .whiteShadow {
       position: absolute;
       content: "";
-      top: 130px;
+      top: 150px;
       right: 0;
       width: 300px;
       height: 450px;
-      box-shadow: inset -90px 0 75px rgba(255, 255, 255, 0.8);
+      box-shadow: inset -100px 0 75px rgba(252, 252, 252, 0.5);
       z-index: 999;
     }
   }
 }
 
+// Seção para captação do cliente
 .clientContent {
   position: relative;
   overflow-x: hidden;
@@ -171,7 +174,6 @@ section {
       width: 50%;
       display: flex;
       flex-direction: column;
-      // align-items: center;
 
       input {
         width: 343px;
@@ -180,7 +182,6 @@ section {
         border-radius: 7px;
         text-align: center;
         margin: 1rem 1rem 0 0;
-        // display: block;
       }
     }
   }
@@ -218,13 +219,6 @@ section {
   section {
     min-height: 80vh;
   }
-  .introductionContent,
-  .servicesContent,
-  .clientContent {
-    > img {
-      // display: none;
-    }
-  }
 
   .introductionContent {
     div {
@@ -258,6 +252,15 @@ section {
     }
   }
 
+  .blogContent{
+    
+    >div .whiteShadow {
+      top: 150px;
+      width: 125px;
+      right: -25px;
+    }
+  }
+
   .clientContent {
     min-height: 60vh;
 
@@ -285,6 +288,15 @@ section {
 }
 
 @media (max-width: 500px) {
+  .introductionContent,
+  .servicesContent,
+  .clientContent {
+    > img {
+      display: none;
+    }
+  }
+
+
   .introductionContent {
     div {
       h1 {
@@ -310,6 +322,14 @@ section {
       button {
         width: 100%;
       }
+    }
+  }
+  
+  .blogContent{
+    
+    >div .whiteShadow {
+      top: 140px;
+      right: -250px;
     }
   }
 
