@@ -18,7 +18,7 @@ Com o git instalado, execute no seu terminal o comando
 
 Com o gerenciador de pacotes Yarn instalado, execute o comando
 
-`yarn start`
+`yarn` e depois `yarn start`
 
 #### E Prontinho o Healthy Food estará executando em sua maquina
 
