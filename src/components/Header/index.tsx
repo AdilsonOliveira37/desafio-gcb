@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -27,10 +28,10 @@ export function Header() {
           <div></div>
         </div>
         <nav className={openBtnBurger ? styles.navbar : ''}>
-          <a href="/">HEALTHY RECIPES</a>
-          <a href="/">BLOG</a>
-          <a href="/">JOIN</a>
-          <button>REGISTER</button>
+          <Link className={styles.linkHeader} to="/">HELTHY RECIPES</Link>
+          <Link className={styles.linkHeader} to="/">BLOG</Link>
+          <Link className={styles.linkHeader} to="/">JOIN</Link>
+          <Link className={styles.linkHeader} to="/signup">REGISTER</Link>
         </nav>
       </div>
     </header>

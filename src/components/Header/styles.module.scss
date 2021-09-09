@@ -22,12 +22,12 @@
     }
 
     nav {
-      a {
+      .linkHeader {
         font-weight: 700;
         color: var(--white-background);
         transition: color 0.3s;
 
-        & + a {
+        & + .linkHeader {
           margin-left: 1.5rem;
         }
 
@@ -36,11 +36,19 @@
         }
       }
 
-      button {
+      .linkHeader:last-child {
         font-weight: 700;
         margin-left: 1.5rem;
         background: var(--white-background);
         color: var(--green-primary);
+        border: none;
+        border-radius: 5px;
+        padding: 1rem 1.5rem;
+        transition: filter 0.3s;
+
+        &:hover {
+          filter: brightness(0.9);
+        }
       }
     }
   }
@@ -65,19 +73,19 @@
 
       transition: transform 0.5s;
 
-      a {
+      .linkHeader {
         text-align: center;
         color: var(--green-primary);
         border: 1px solid var(--green-primary);
         padding: 1rem;
         width: 50%;
-        
-        & + a {
+
+        & + .linkHeader {
           margin: 0;
         }
       }
 
-      button {
+      .linkHeader:last-child {
         width: 50%;
         margin: 0;
         background-color: var(--green-primary);
@@ -91,7 +99,6 @@
 
     .btnBurgerClosed,
     .btnBurgerOpen {
-
       z-index: 999;
       margin-right: 1.5rem;
       cursor: pointer;
@@ -109,7 +116,6 @@
     .btnBurgerOpen {
       position: fixed;
       right: 1rem;
-
 
       div {
         &:first-child {

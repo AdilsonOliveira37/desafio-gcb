@@ -3,35 +3,11 @@ import { viacepAPI } from '../../services/viacep';
 
 import styles from './styles.module.scss';
 
-// A custom validation function. This must return an object
-// which keys are symmetrical to our values/initialValues
-// const validate = values => {
-//   const errors = {};
-//   if (!values.name) {
-//     errors.name = 'Required';
-//   } else if (values.name.length > 15) {
-//     errors.name = 'Must be 15 characters or less';
-//   }
-
-//   if (!values.lastName) {
-//     errors.lastName = 'Required';
-//   } else if (values.lastName.length > 20) {
-//     errors.lastName = 'Must be 20 characters or less';
-//   }
-
-//   if (!values.email) {
-//     errors.email = 'Required';
-//   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-//     errors.email = 'Invalid email address';
-//   }
-
-//   return errors;
-// };
-
 interface Values {
   name: string;
   email: string;
   birthdate: string;
+  cpf: string;
   cep: string;
   street: string;
   number: string;
@@ -45,6 +21,7 @@ interface Errors {
   name?: string;
   email?: string;
   birthdate?: string;
+  cpf?: string;
   cep?: string;
   street?: string;
   number?: string;
@@ -88,9 +65,14 @@ export function SignupForm() {
     else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email))
       errors.email = 'this address is not valid ☹';
 
-    if (!values.birthdate){
+    if (!values.birthdate) {
       console.log(values)
       errors.birthdate = "what's the date of your birth?";
+    }
+
+    if (!values.cpf) {
+      console.log(values)
+      errors.cpf = "what's the date of your birth?";
     }
 
     if (!values.cep)
@@ -114,6 +96,7 @@ export function SignupForm() {
         name: '',
         email: '',
         birthdate: '',
+        cpf: '',
         cep: '',
         street: '',
         number: '',
@@ -171,13 +154,26 @@ export function SignupForm() {
 
           <div>
             <div className={styles.formGroup}>
+              <label htmlFor="cpf">CPF</label>
+              <Field
+                id="cpf"
+                name="cpf"
+                type="text"
+                placeholder="13345255582"
+                maxlength="11"
+              />
+              <span className={styles.error}>{errors.birthdate}</span>
+            </div>
+
+            <div className={styles.formGroup}>
               <label htmlFor="cep">CEP</label>
               <Field
                 id="cep"
                 name="cep"
-                placeholder="37701-024"
+                placeholder="37701024"
                 type="text"
                 accept="number"
+                maxlength="8"
                 onBlur={(event: any) => handleFillAddress(event, setFieldValue)}
               />
               <span className={styles.error}>{errors.cep}</span>
@@ -194,6 +190,9 @@ export function SignupForm() {
               <span className={styles.error}>{errors.street}</span>
             </div>
 
+          </div>
+
+          <div>
             <div className={styles.formGroup}>
               <label htmlFor="number">Number</label>
               <Field
@@ -204,15 +203,13 @@ export function SignupForm() {
               />
               <span className={styles.error}>{errors.number}</span>
             </div>
-          </div>
 
-          <div>
             <div className={styles.formGroup}>
               <label htmlFor="complement">Complement</label>
               <Field
                 id="complement"
                 name="complement"
-                placeholder="Rua Jose Faria da Fonseca"
+                placeholder="Apart. 26"
                 type="text"
               />
               <span className={styles.error}>{errors.complement}</span>

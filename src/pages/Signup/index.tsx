@@ -12,7 +12,7 @@ export function Signup() {
           <img src={arrowIcon} alt="icon arrow" />
           ...Our Blog</a>
         <strong>Come be healthy</strong>
-        <p>Can you be happy</p>
+        <p>Can you be happy & healthy</p>
         <img src={illustrationImg} alt="Ilustração simbolizando um app de comidas saudaveis" />
       </aside>
       <main>
