@@ -37,7 +37,7 @@ export function Home() {
     },
     mobile: {
       breakpoint: {
-        max: 500,
+        max: 650,
         min: 0
       },
       items: 1,
@@ -46,7 +46,7 @@ export function Home() {
     tablet: {
       breakpoint: {
         max: 1024,
-        min: 500
+        min: 650
       },
       items: 2,
       partialVisibilityGutter: 30

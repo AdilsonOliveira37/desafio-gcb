@@ -8,15 +8,19 @@
   border-radius: 7px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
 
-  // width: auto;
-  img {
-    border-radius: 7px 0 0 7px;
-    object-fit: cover;
-    height: 225px;
-    width: 80%;
+  .imgContent{
+    width: 70%;
+    height: 100%;
+    
+    img {
+      border-radius: 7px 0 0 7px;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   }
 
-  div {
+  .content{
     width: 100%;
     margin: auto 0;
     padding: 1rem;
