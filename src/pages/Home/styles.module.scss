@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  overflow-x: hidden;
 }
 
 // Estilos de propriedades similares entre seções
@@ -221,6 +222,10 @@ section {
   }
 
   .introductionContent {
+    > img {
+      display: none;
+    }
+
     div {
       align-items: center;
 
@@ -233,8 +238,7 @@ section {
 
   .servicesContent {
     div {
-      margin: 0 auto;
-      align-items: center;
+      margin: 0 1rem 0 auto;
       text-align: center;
 
       > div {
@@ -318,6 +322,7 @@ section {
   .servicesContent {
     div > div {
       width: 80%;
+      margin: 0 auto;
 
       button {
         width: 100%;
